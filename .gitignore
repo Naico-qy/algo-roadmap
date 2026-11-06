@@ -1,0 +1,9 @@
+# 含 API Key，绝不提交
+config.json
+config.json.tmp
+
+# 运行日志与缓存
+logs/
+__pycache__/
+*.pyc
+*.pyo

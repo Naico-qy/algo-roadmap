@@ -1,0 +1,8 @@
+{
+  "_说明": "复制成 config.json 后填入 apiKey。也可以直接在网页侧栏的「设置」里填，会自动写这个文件。",
+  "provider": "deepseek",
+  "apiKey": "sk-你的key",
+  "model": "deepseek-chat",
+  "baseUrl": "https://api.deepseek.com/v1/chat/completions",
+  "maxTokens": 1400
+}

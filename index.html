@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>机试训练路线图 · C++ 从语法到限时模拟</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="logo">⌘</span>
+      <div>
+        <h1>机试训练路线图</h1>
+        <p class="sub">C++ · 从基础语法到限时模拟 · 面向保研夏令营 / 预推免机试</p>
+      </div>
+    </div>
+    <div class="top-right">
+      <div class="countdown" id="countdown"></div>
+      <button class="icon-btn" id="btn-settings" title="设置">⚙</button>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs wrap" id="tabs">
+  <button class="tab active" data-view="today">今日</button>
+  <button class="tab" data-view="roadmap">路线图</button>
+  <button class="tab" data-view="review">复盘本 <span class="pill" id="pill-due"></span></button>
+  <button class="tab" data-view="resources">资源库</button>
+  <button class="tab" data-view="stats">进度</button>
+  <button class="tab" data-view="settings">设置</button>
+</nav>
+
+<main class="wrap">
+  <section id="view-today" class="view"></section>
+  <section id="view-roadmap" class="view hidden"></section>
+  <section id="view-review" class="view hidden"></section>
+  <section id="view-resources" class="view hidden"></section>
+  <section id="view-stats" class="view hidden"></section>
+  <section id="view-settings" class="view hidden"></section>
+</main>
+
+<footer class="wrap">
+  <p>所有练习内容跳转到各平台官方页面；本站只做路线、记录与复盘，不提供判题。</p>
+  <p class="small">进度、笔记、复盘记录保存在本浏览器（localStorage）。换电脑或在设置里导出 JSON 备份。</p>
+</footer>
+
+<div id="toast" class="toast"></div>
+<button id="chat-fab" class="chat-fab" title="打开 AI 助教">AI</button>
+
+<aside id="chat" class="chat hidden" aria-label="AI 助教">
+  <div class="chat-head">
+    <div class="chat-title">AI 助教 <span class="chat-model" id="chat-model">…</span></div>
+    <div class="chat-actions">
+      <button id="chat-new" title="新对话">＋</button>
+      <button id="chat-setup" title="模型设置">⚙</button>
+      <button id="chat-close" title="关闭">×</button>
+    </div>
+  </div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-ctx hidden" id="chat-ctx"></div>
+  <form class="chat-compose" id="chat-form">
+    <textarea id="chat-input" rows="1" placeholder="遇到不会的，直接问…（Enter 发送，Shift+Enter 换行）"></textarea>
+    <div class="chat-compose-row">
+      <span class="small muted">点左侧「问」可带上题目上下文</span>
+      <button type="submit" id="chat-send">发送</button>
+    </div>
+  </form>
+</aside>
+
+<div id="modal" class="modal hidden"><div class="modal-box" id="modal-box"></div></div>
+
+<script src="assets/app.js"></script>
+<script src="assets/chat.js"></script>
+<script src="assets/sync.js"></script>
+</body>
+</html>
